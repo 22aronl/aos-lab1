@@ -1,0 +1,8 @@
+kernel/*
+ubuntu.img
+ubuntu2.img
+user-data.img
+kbuild/*
+mod_dir/*
+mount_point/*
+example.txt
