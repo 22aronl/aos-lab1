@@ -470,3 +470,264 @@ ls
 l
 g++ access.cpp 
 sudo ./a.out
+ls
+cd kbuild
+ls
+cd mm
+ls
+cd vmscan.c
+ls
+cd ..
+ls
+cd ..
+ls
+cd kernel/
+ls
+cd linux-5.10.209/
+ls
+cd mm
+l
+cd vmscan.c
+vim vmscan.c
+ls
+cd !
+cd ~
+ls
+cat access.cpp 
+perf list
+cat access.cpp 
+perf list PERF_COUNT
+perf list PERF_COUNT_HW_CACHE_OP_READ
+git init
+ls
+git remote add origin git@github.com:22aronl/aos-lab1.git
+git push -u origin
+git push --set-upstream origin master
+ls
+git push --set-upstream origin master
+git status
+git add .
+ls
+git status
+vim .gitignore
+git status
+cat ouptut.txt
+git add .
+git commit -m "code"
+git push
+git push --set-upstream origin master
+ssh-keygen
+git push
+git push --set-upstream origin master
+git remote add origin git@github.com:22aronl/aos-lab1.git
+git remote 
+git remote origin
+git remote remove origin
+git remote add origin git@github.com:22aronl/aos-lab1.git
+ls
+perf list -e PERF_COUNT_HW_CACHE_OP_READ
+perf list -event PERF_COUNT_HW_CACHE_OP_READ
+perf list --event PERF_COUNT_HW_CACHE_OP_READ
+perf list cache
+perf list -e cache
+perf list -e --details cache
+perf list --details cache
+perf list --details hw
+cat access.cpp
+perf list
+perf list --event l1d.eviction
+perf stat -h
+ls
+sudo ./run_kvm.sh 
+qemu-system-x86_64 -hda ubuntu.img -hdb user-data.img -netdev user,id=user.0 -device e1000,netdev=user.0
+qemu-system-x86_64 -hda ubuntu.img -hdb user-data.img -netdev user,id=user.0 -device e1000,netdev=user.0 -nographics
+qemu-system-x86_64 -hda ubuntu.img -hdb user-data.img -netdev user,id=user.0 -device e1000,netdev=user.0 -nographic
+sudo qemu-system-x86_64 -hda ubuntu.img -hdb user-data.img -netdev user,id=user.0 -device e1000,netdev=user.0 -nographic
+sudo qemu-system-x86_64 -enable-kvm -m 2048 -hda ubuntu.img -hdb user-data.img -netdev user,id=user.0 -device e1000,netdev=user.0 -nographic
+sudo qemu-system-x86_64 -enable-kvm -m 2048 -kernel "kbuild/arch/x86/boot/bzImage" -hda ubuntu.img -hdb user-data.img -netdev user,id=user.0 -device e1000,netdev=user.0 -nographic
+quit
+ls
+lsmod
+ip addr
+cat /etc/sysconfig/network-scripts/ifcfg-*
+cat /etc/network/interfaces
+systemctl status NetworkManager
+systemctl
+systemctl status dhclient
+ping -c 4 google.com
+firewalld
+sudo firewalld
+iptables
+cat /var/log/daemon.log
+sudo cat /var/log/daemon.log
+ls
+cd kbuild/
+vim .config
+ls
+vim .config
+libvirtd
+cd ~
+sudo install libvirtd
+sudo apt update
+sudo apt install libvirt-daemon-system libvirt-clients
+libvirtd
+sudo systemctl start libvirtd
+sudo systemctl enable libvirtd
+sudo ./run_kvm.sh 
+ls
+virsh net-list --all
+virsh net-start --network default
+virsh net-list --all
+virsh net-autostart --network default
+ls
+cd /etc/qemu
+cd /etc
+ls
+mkdir qemu
+sudo mkdir qemu
+cd qemu
+ls
+sudo touch bridge.conf
+sudo vim bridge.conf 
+ls
+cd ..
+ls
+cd ~
+ls
+virsh net-start default
+cd /etc/libvirt
+ls
+cd qemu
+cd networks
+ls
+cat default.xml 
+sudo cat default.xml 
+sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
+sudo virsh net-start default
+virsh net-list --all
+virsh net-start --network default
+virst net-start
+virsh net-start
+virst net-start --list
+virs net-start --list
+virsh net-start --list
+sudo virsh net-start default
+sudo virst --list
+sudo virsh net-list 
+sudo virsh net-list --all
+cd ~
+ls
+vim run_kvm.sh 
+sudo ./run_kvm.sh 
+vim run_kvm.sh 
+sudo ./run_kvm.sh 
+vim /etc/qemu/bridge.conf
+sudo chmod -R a+r /etc/qemu/bridge.conf 
+sudo ./run_kvm.sh 
+vim /etc/qemu/bridge.conf 
+sudo vim /etc/qemu/bridge.conf 
+sudo ./run_kvm.sh 
+ls
+sysctl -a | grep forward
+sudo sysctl -a | grep forward
+sudo sysctl net.ipv4.ip_forward = 1
+sudo sysctl net.ipv4.ip_forward=1
+sudo sysctl net.ipv4.conf.all.forwarding=1
+sudo sysctl net.ipv6.conf.all.forwarding=1
+sudo ./run_kvm.sh 
+ls
+cp run_kvm.sh two_run_kvm.s
+mv two_run_kvm.s two_run_kvm.sh
+ls
+vim run_kvm.sh 
+sudo ./run_kvm.sh 
+ls
+sudo systemctl status libvirtd
+sudo systemctl start libvirtd
+sudo systemctl restart libvirtd
+vim /etc/libvirt/libvirt.conf
+sudo vim /etc/libvirt/libvirt.conf
+sudo ./run_kvm.sh 
+ip addr
+virsh net-list --all
+sudo virsh net-list --all
+ip link show virbr0
+sudo ip link set virbr0 up
+ip link show virbr0
+sudo ip link set virbr0 up
+ip addr
+sudo virsh net-list --all
+sudo systemctl restart libvirtd
+sudo virsh net-dumpxml default
+ip addr
+sysctl -a | grep forward
+sudo sysctl -a | grep forward
+systemd-networkd
+ls
+vim run_kvm.sh 
+ls
+cd mount_point/
+ls
+cd lib
+ls
+cd modules
+ls
+mv ../../../kbuild/lib/modules .
+mv ../../../mod_dir/lib/modules .
+mv ../../../mod_dir/lib/modules/ .
+ls
+cd ~/mod_dir/lib/modules/ .
+mv ~/mod_dir/lib/modules/ .
+ls
+cd modules/
+ls
+cd ..
+mv modules/5.10.209/ .
+ls
+rm modules/
+rm -r modules/
+ls
+cd ~
+ls
+fusermount -u mount_point
+ls
+ls
+ls- la
+ls -la
+vim run_kvm.sh 
+ls
+sudo ./run_kvm.sh 
+ls
+wget https://cloud.debian.org/images/cloud/buster/latest/debian-10-nocloud-amd64.qcow2
+ls
+kvm -m 2048 -hda debian-10-nocloud-amd64.qcow2 
+sudo kvm -m 2048 -hda debian-10-nocloud-amd64.qcow2 -nographic
+ls
+sudo ./run_kvm.sh 
+ls
+mv debian-10-nocloud-amd64.qcow2 debian.qcow2
+ls
+cd kbuild/
+ls
+tmux ls
+tmux attach -t 0
+ls
+cd ..
+ls
+cp run_kvm.sh run_debian.sh
+ls
+vim run_
+vim run_debian.sh 
+sudo ./run_debian.sh 
+ls
+vim run_debian.sh 
+sudo ./run_debian.sh 
+ls
+lscpu
+cpuid
+cat /proc/cpuinfo
+lscpu
+ls
+sudo dmidecode -t processor
+sudo dmidecode
+sudo dmidecode -t cache | grep -A 4 "Level 1"

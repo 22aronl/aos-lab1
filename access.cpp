@@ -134,18 +134,45 @@ int main() {
      //
     printf("Process locked onto CPU core 0.\n");
 
+    size_t size = 1024 * 1024 * 512; // 512 MB
+
+    // Allocate memory using malloc
+    char* ptr = (char*)malloc(size);
+    if (ptr == nullptr) {
+        std::cerr << "Memory allocation failed!" << std::endl;
+        return 1;
+    }
+
+    for(size_t i = 0; i < size; i++) {
+        ptr[i] = ptr[i] + 1;
+    }
+
+    // Free the allocated memory when done
+    
+    
+    std::cout << "Finished Memflush" << std::endl;
+
     // Create perf events for cache access, cache miss, and TLB miss
     int cache_access_fd = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_L1D | (PERF_COUNT_HW_CACHE_OP_READ << 8) | (PERF_COUNT_HW_CACHE_RESULT_ACCESS << 16));
     int cache_miss_fd = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_L1D | (PERF_COUNT_HW_CACHE_OP_READ << 8) | (PERF_COUNT_HW_CACHE_RESULT_MISS << 16));
     int tlb_miss_fd = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_DTLB | (PERF_COUNT_HW_CACHE_OP_READ << 8) | (PERF_COUNT_HW_CACHE_RESULT_MISS << 16));
 	
+    int cache_access_fd_write = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_L1D | (PERF_COUNT_HW_CACHE_OP_WRITE << 8) | (PERF_COUNT_HW_CACHE_RESULT_ACCESS << 16));
+    int cache_miss_fd_write = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_L1D | (PERF_COUNT_HW_CACHE_OP_WRITE << 8) | (PERF_COUNT_HW_CACHE_RESULT_MISS << 16));
+    int tlb_miss_fd_write = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_DTLB | (PERF_COUNT_HW_CACHE_OP_WRITE << 8) | (PERF_COUNT_HW_CACHE_RESULT_MISS << 16));
+
+    // int cache_access_fd_prefetch = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_L1D | (PERF_COUNT_HW_CACHE_OP_PREFETCH << 8) | (PERF_COUNT_HW_CACHE_RESULT_ACCESS << 16));
+    // int cache_miss_fd_prefetch = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_L1D | (PERF_COUNT_HW_CACHE_OP_PREFETCH << 8) | (PERF_COUNT_HW_CACHE_RESULT_MISS << 16));
+    // int tlb_miss_fd_prefetch = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_DTLB | (PERF_COUNT_HW_CACHE_OP_PREFETCH << 8) | (PERF_COUNT_HW_CACHE_RESULT_MISS << 16));
+
     size_t size_in_bytes = 1024 * 1024 * 1024;
     int dec = 2;
     void* anonymous_buffer;
-    int private_flag = MAP_PRIVATE & 1;
-    int shared_flag = MAP_SHARED & 0;
-    int map_populate = MAP_POPULATE & 1;
-    int should_memset = 1;
+    int private_flag = MAP_PRIVATE && 0;
+    int shared_flag = MAP_SHARED && 1;
+    int map_populate = MAP_POPULATE && 1;
+    int should_memset = 0;
+    opt_random_access = false;
     if(dec == 1) {
         anonymous_buffer = mmap(NULL, BUFFER_SIZE, PROT_READ | PROT_WRITE, private_flag | shared_flag | map_populate | MAP_ANONYMOUS, -1, 0);
         if (anonymous_buffer == MAP_FAILED) {
@@ -153,7 +180,8 @@ int main() {
             exit(EXIT_FAILURE);
         }
     } else if(dec == 2) {
-	#define FILE_PATH "example.txt"
+        #define FILE_PATH "example.txt"
+        std::cout << "file backed" << std::endl;
         int fd = open(FILE_PATH, O_CREAT | O_RDWR, 0666);
         if (fd == -1) {
             perror("open");
@@ -166,25 +194,27 @@ int main() {
             exit(EXIT_FAILURE);
         }
 
-	anonymous_buffer = mmap(NULL, BUFFER_SIZE, PROT_READ | PROT_WRITE, private_flag | shared_flag | map_populate | MAP_SHARED, fd, 0);
-	if(anonymous_buffer == MAP_FAILED) {
-	    perror("mmap");
-	    close(fd);
-	    exit(EXIT_FAILURE);
+        anonymous_buffer = mmap(NULL, BUFFER_SIZE, PROT_READ | PROT_WRITE, private_flag | shared_flag | map_populate | MAP_SHARED, fd, 0);
+        if(anonymous_buffer == MAP_FAILED) {
+            perror("mmap");
+            close(fd);
+            exit(EXIT_FAILURE);
 
-	}
+        }
     }
 
     if(should_memset) {
 
-	memset(anonymous_buffer, 0, BUFFER_SIZE);
-	if(msync(anonymous_buffer, BUFFER_SIZE, MS_SYNC) == -1) {
-	    perror("msync");
-	    exit(EXIT_FAILURE);
+        memset(anonymous_buffer, 0, BUFFER_SIZE);
+        if(msync(anonymous_buffer, BUFFER_SIZE, MS_SYNC) == -1) {
+            perror("msync");
+            exit(EXIT_FAILURE);
 
-	}
+        }
 
     }
+
+    free(ptr); //ensure mmap doesn't get put into this place
 
     char* memory_loc = (char*) anonymous_buffer; //malloc(size_in_bytes);
 
@@ -192,6 +222,14 @@ int main() {
     ioctl(cache_access_fd, PERF_EVENT_IOC_ENABLE, 0);
     ioctl(cache_miss_fd, PERF_EVENT_IOC_ENABLE, 0);
     ioctl(tlb_miss_fd, PERF_EVENT_IOC_ENABLE, 0);
+
+    ioctl(cache_access_fd_write, PERF_EVENT_IOC_ENABLE, 0);
+    ioctl(cache_miss_fd_write, PERF_EVENT_IOC_ENABLE, 0);
+    ioctl(tlb_miss_fd_write, PERF_EVENT_IOC_ENABLE, 0);
+
+    // ioctl(cache_access_fd_prefetch, PERF_EVENT_IOC_ENABLE, 0);
+    // ioctl(cache_miss_fd_prefetch, PERF_EVENT_IOC_ENABLE, 0);
+    // ioctl(tlb_miss_fd_prefetch, PERF_EVENT_IOC_ENABLE, 0);
 
     // Execute the code to be measured (e.g., some computational task)
 	
@@ -203,12 +241,29 @@ int main() {
     ioctl(cache_miss_fd, PERF_EVENT_IOC_DISABLE, 0);
     ioctl(tlb_miss_fd, PERF_EVENT_IOC_DISABLE, 0);
 
+    ioctl(cache_access_fd_write, PERF_EVENT_IOC_DISABLE, 0);
+    ioctl(cache_miss_fd_write, PERF_EVENT_IOC_DISABLE, 0);
+    ioctl(tlb_miss_fd_write, PERF_EVENT_IOC_DISABLE, 0);
+
+    // ioctl(cache_access_fd_prefetch, PERF_EVENT_IOC_DISABLE, 0);
+    // ioctl(cache_miss_fd_prefetch, PERF_EVENT_IOC_DISABLE, 0);
+    // ioctl(tlb_miss_fd_prefetch, PERF_EVENT_IOC_DISABLE, 0);
+
     // Read and print the collected data
     long long cache_access_count, cache_miss_count, tlb_miss_count;
     read(cache_access_fd, &cache_access_count, sizeof(cache_access_count));
     read(cache_miss_fd, &cache_miss_count, sizeof(cache_miss_count));
     read(tlb_miss_fd, &tlb_miss_count, sizeof(tlb_miss_count));
 
+    long long cache_access_count_write, cache_miss_count_write, tlb_miss_count_write;
+    read(cache_access_fd_write, &cache_access_count_write, sizeof(cache_access_count_write));
+    read(cache_miss_fd_write, &cache_miss_count_write, sizeof(cache_miss_count_write));
+    read(tlb_miss_fd_write, &tlb_miss_count_write, sizeof(tlb_miss_count_write));
+
+    long long cache_access_count_prefetch, cache_miss_count_prefetch, tlb_miss_count_prefetch = 0;
+    // read(cache_access_fd_prefetch, &cache_access_count_prefetch, sizeof(cache_access_count_prefetch));
+    // read(cache_miss_fd_prefetch, &cache_miss_count_prefetch, sizeof(cache_miss_count_prefetch));
+    // read(tlb_miss_fd_prefetch, &tlb_miss_count_prefetch, sizeof(tlb_miss_count_prefetch));
 
     struct rusage usage;
     if (getrusage(RUSAGE_SELF, &usage) == -1) {
@@ -228,13 +283,38 @@ int main() {
     double tlb_miss_percentage = ((double)tlb_miss_count/cache_access_count)*100;
     double l1_miss_percentage = ((double)cache_miss_count / cache_access_count)*100;
     //printf("L1 Data Cache Miss Percentage: %.8f%%\n", l1_miss_percentage);
+    
+
+    std::cout << cache_access_count_write << std::endl;
+    std::cout << cache_miss_count_write << std::endl;
+    std::cout << tlb_miss_count_write << std::endl;  
+
+    std::cout << cache_access_count_prefetch << std::endl;
+    std::cout << cache_miss_count_prefetch << std::endl;
+    std::cout << tlb_miss_count_prefetch << std::endl;  
+
     std::cout << l1_miss_percentage << std::endl;
     std::cout << tlb_miss_percentage << std::endl;
+
+    long cache_total = cache_access_count + cache_access_count_write + cache_access_count_prefetch;
+    double tlb_total = ((double)(tlb_miss_count + tlb_miss_count_write + tlb_miss_count_prefetch)/cache_total) * 100;
+    double l1_total = ((double)(cache_miss_count + cache_miss_count_write + cache_miss_count_prefetch)/cache_total) * 100;
+
+    std::cout << l1_total << std::endl;
+    std::cout << tlb_total << std::endl;
     //printf("Data TLB Miss Percentage: %.8f%%\n", tlb_miss_percentage);
     // Close the perf event file descriptors
     close(cache_access_fd);
     close(cache_miss_fd);
     close(tlb_miss_fd);
+
+    close(cache_access_fd_write);
+    close(cache_miss_fd_write);
+    close(tlb_miss_fd_write);
+
+    // close(cache_access_fd_prefetch);
+    // close(cache_miss_fd_prefetch);
+    // close(tlb_miss_fd_prefetch);
 
     return 0;
 }

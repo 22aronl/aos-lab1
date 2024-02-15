@@ -1,106 +1,28 @@
-execve("./a.out", ["./a.out"], 0x7fff0d4f9800 /* 26 vars */) = 0
-brk(NULL)                               = 0x55bac1f34000
-arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe697fe8a0) = -1 EINVAL (Invalid argument)
-mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f98fb189000
-access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
-openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
-newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=29803, ...}, AT_EMPTY_PATH) = 0
-mmap(NULL, 29803, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f98fb181000
-close(3)                                = 0
-openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
-newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2260296, ...}, AT_EMPTY_PATH) = 0
-mmap(NULL, 2275520, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f98faf55000
-mprotect(0x7f98fafef000, 1576960, PROT_NONE) = 0
-mmap(0x7f98fafef000, 1118208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9a000) = 0x7f98fafef000
-mmap(0x7f98fb100000, 454656, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ab000) = 0x7f98fb100000
-mmap(0x7f98fb170000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21a000) = 0x7f98fb170000
-mmap(0x7f98fb17e000, 10432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f98fb17e000
-close(3)                                = 0
-openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
-pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
-pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
-pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\244;\374\204(\337f#\315I\214\234\f\256\271\32"..., 68, 896) = 68
-newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
-pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
-mmap(NULL, 2260560, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f98fad2d000
-mmap(0x7f98fad55000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f98fad55000
-mmap(0x7f98faeea000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f98faeea000
-mmap(0x7f98faf42000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7f98faf42000
-mmap(0x7f98faf48000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f98faf48000
-close(3)                                = 0
-openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
-newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
-mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f98fac46000
-mmap(0x7f98fac54000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7f98fac54000
-mmap(0x7f98facd0000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7f98facd0000
-mmap(0x7f98fad2b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7f98fad2b000
-close(3)                                = 0
-openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
-newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=125488, ...}, AT_EMPTY_PATH) = 0
-mmap(NULL, 127720, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f98fac26000
-mmap(0x7f98fac29000, 94208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f98fac29000
-mmap(0x7f98fac40000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7f98fac40000
-mmap(0x7f98fac44000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d000) = 0x7f98fac44000
-close(3)                                = 0
-mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f98fac24000
-arch_prctl(ARCH_SET_FS, 0x7f98fac253c0) = 0
-set_tid_address(0x7f98fac25690)         = 1053141
-set_robust_list(0x7f98fac256a0, 24)     = 0
-rseq(0x7f98fac25d60, 0x20, 0, 0x53053053) = 0
-mprotect(0x7f98faf42000, 16384, PROT_READ) = 0
-mprotect(0x7f98fac44000, 4096, PROT_READ) = 0
-mprotect(0x7f98fad2b000, 4096, PROT_READ) = 0
-mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f98fac22000
-mprotect(0x7f98fb170000, 45056, PROT_READ) = 0
-mprotect(0x55bac14c2000, 4096, PROT_READ) = 0
-mprotect(0x7f98fb1c3000, 8192, PROT_READ) = 0
-prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
-munmap(0x7f98fb181000, 29803)           = 0
-getrandom("\x4e\x13\xc4\xea\x78\xee\x6a\x3c", 8, GRND_NONBLOCK) = 8
-brk(NULL)                               = 0x55bac1f34000
-brk(0x55bac1f55000)                     = 0x55bac1f55000
-futex(0x7f98fb17e77c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
-sched_setaffinity(0, 128, [0])          = 0
-newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
-write(1, "Process locked onto CPU core 0.\n", 32) = 32
-perf_event_open({type=PERF_TYPE_HW_CACHE, size=PERF_ATTR_SIZE_VER7, config=PERF_COUNT_HW_CACHE_RESULT_ACCESS<<16|PERF_COUNT_HW_CACHE_OP_READ<<8|PERF_COUNT_HW_CACHE_L1D, sample_period=0, sample_type=0, read_format=0, disabled=1, exclude_kernel=1, exclude_hv=1, precise_ip=0 /* arbitrary skid */, ...}, 0, -1, -1, 0) = 3
-perf_event_open({type=PERF_TYPE_HW_CACHE, size=PERF_ATTR_SIZE_VER7, config=PERF_COUNT_HW_CACHE_RESULT_MISS<<16|PERF_COUNT_HW_CACHE_OP_READ<<8|PERF_COUNT_HW_CACHE_L1D, sample_period=0, sample_type=0, read_format=0, disabled=1, exclude_kernel=1, exclude_hv=1, precise_ip=0 /* arbitrary skid */, ...}, 0, -1, -1, 0) = 4
-perf_event_open({type=PERF_TYPE_HW_CACHE, size=PERF_ATTR_SIZE_VER7, config=PERF_COUNT_HW_CACHE_RESULT_MISS<<16|PERF_COUNT_HW_CACHE_OP_READ<<8|PERF_COUNT_HW_CACHE_DTLB, sample_period=0, sample_type=0, read_format=0, disabled=1, exclude_kernel=1, exclude_hv=1, precise_ip=0 /* arbitrary skid */, ...}, 0, -1, -1, 0) = 5
-openat(AT_FDCWD, "example.txt", O_RDWR|O_CREAT, 0666) = 6
-ftruncate(6, 1073741824)                = 0
-mmap(NULL, 1073741824, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f98bac22000
-msync(0x7f98bac22000, 1073741824, MS_SYNC) = 0
-ioctl(3, PERF_EVENT_IOC_ENABLE, 0)      = 0
-ioctl(4, PERF_EVENT_IOC_ENABLE, 0)      = 0
-ioctl(5, PERF_EVENT_IOC_ENABLE, 0)      = 0
-ioctl(3, PERF_EVENT_IOC_DISABLE, 0)     = 0
-ioctl(4, PERF_EVENT_IOC_DISABLE, 0)     = 0
-ioctl(5, PERF_EVENT_IOC_DISABLE, 0)     = 0
-read(3, "\30Fu\204\n\0\0\0", 8)         = 8
-read(4, "\n\20\312!\0\0\0\0", 8)        = 8
-read(5, "F\375R\0\0\0\0\0", 8)          = 8
-getrusage(RUSAGE_SELF, {ru_utime={tv_sec=26, tv_usec=574875}, ru_stime={tv_sec=1, tv_usec=616661}, ...}) = 0
-write(1, "\nResource usage:\n", 17)     = 17
-write(1, "574875\n", 7)                 = 7
-write(1, "616661\n", 7)                 = 7
-write(1, "1051892\n", 8)                = 8
-write(1, "132\n", 4)                    = 4
-write(1, "675781\n", 7)                 = 7
-write(1, "0\n", 2)                      = 2
-write(1, "5406248\n", 8)                = 8
-write(1, "753\n", 4)                    = 4
-write(1, "136\n", 4)                    = 4
-write(1, "45171951128\n", 12)           = 12
-write(1, "566890506\n", 10)             = 10
-write(1, "5438790\n", 8)                = 8
-write(1, "1.25496\n", 8)                = 8
-write(1, "0.0120402\n", 10)             = 10
-close(3)                                = 0
-close(4)                                = 0
-close(5)                                = 0
-exit_group(0)                           = ?
-+++ exited with 0 +++
+Process locked onto CPU core 0.
+Finished Memflush
+file backed
+
+Resource usage:
+256370
+664009
+1052052
+262307
+262136
+0
+2097096
+1
+95
+19495440865
+19360569539
+197447603
+164270
+7373938258
+21464780
+2473272
+0
+140537685705680
+0
+1.01984
+0.000848477
+525680
+0.00986568
