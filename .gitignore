@@ -6,3 +6,11 @@ kbuild/*
 mod_dir/*
 mount_point/*
 example.txt
+debian.qcow2
+.ssh/*
+.vscode-server/*
+.bash_history*
+.lesshst
+.viminfo*
+.wget-hsts*
+a.out
