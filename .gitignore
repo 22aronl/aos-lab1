@@ -15,3 +15,5 @@ debian.qcow2
 .wget-hsts*
 a.out
 .*
+.bash_history
+.viminfo

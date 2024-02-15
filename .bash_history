@@ -731,3 +731,185 @@ ls
 sudo dmidecode -t processor
 sudo dmidecode
 sudo dmidecode -t cache | grep -A 4 "Level 1"
+ls
+dmesg
+sudo dmesg
+g++ access.cpp 
+./a.out
+sudo ./a.out
+g++ access.cpp 
+sudo ./a.out
+g++ access.cpp 
+sudo ./a.out
+g++ access.cpp 
+sudo ./a.out
+g++ access.cpp 
+sudo ./a.out
+g++ access.cpp 
+sudo ./a.out
+g++ access.cpp 
+sudo ./a.out
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access2.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+objdump -d a.out
+objdump -d a.out > output.txt
+dmesg
+sudo dmesg > output.txt
+sudo dmesg
+ls
+dmesg | grep -i tlb
+sudo dmesg | grep -i tlb
+sudo apt-get install cpuid
+cpuid -1 -l
+cpuid -1
+cpuid -1 | grep -i tlb
+cpuid -1 > tlb.txt
+sl
+ls
+g++ map.cpp 
+sudo ./a.out > output.txt
+g++ -static map.cpp 
+sudo ./a.out > output.txt
+getconf LEVEL1_DCACHE_LINESIZE
+git status
+git add .
+git status
+git add .
+git remove .lesshst
+git add .gitignore 
+git statu
+sgit status
+git status
+ls
+git add .
+git status
+git commit -m "update .gitignore"
+git git push
+git push
+git status
+git add .
+git add run_debian.sh 
+gitadd tlb.txt 
+git add tlb.txt 
+git two_run_kvm.sh
+git add two_run_kvm.sh 
+sudo git add .
+git status
+git commit -m "updates"
+git push
+git commit --amend --reset-autho
+git push
+git prune
+git remote add test git@github.com:22aronl/aos-lab1.git
+git push test
+git branch
+git push -u test master
+git remote add test1 https://github.com/22aronl/aos-lab1.git
+git push -u test1 mater
+git push -u test1 master
+sudo dmesg
+sudo ./run_debian.sh 
+ls
+sudo dmesg
+ls
+resize2fs mount_point
+ls
+tmux ls
+ls
+fusermount -u mount_point
+ls
+cd mount_point
+ls
+cd lib
+ls
+cd modules
+ls
+rm -r 5.10.209/
+ls
+cd ~/mod_dir/lib/modules/5.10.209/ .
+mv ~/mod_dir/lib/modules/5.10.209/ .
+ls
+cd ~
+ls
+fusermount -u mount_point
+ls
+cd mount_point/
+ls
+cd usr/
+ls
+cd ..
+ls
+cd etc
+ls
+cd ..
+ls
+cd root
+ls
+touch test
+ls
+cd ..
+ls
+cd ..
+fusermount -u mount_point
+ls
+cd mount_point/root
+ls
+cat snap
+cd snap
+ls
+cd ..
+ls
+cp ~/vm_access.cpp .
+ls
+rm vm_access.cpp 
+cp ~/vm_access.cpp .
+cp ~/example.txt .
+ls
+cat example.txt 
+rm example.txt 
+touch example.txt
+ls
+df -h
+cd ~
+ls
+fusermount -u mount_point
+ls
+cd mount_point
+ls
+cd root
+ls
+cp ~/vm_access.cpp .
+ls
+touch example.txt
+ls
+cd ~
+ls
+fusermount -u mount_point
+ls

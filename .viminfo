@@ -15,7 +15,7 @@
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1707940578,,"wq"
+|2,0,1707986883,,"wq"
 :q!
 |2,0,1707940501,,"q!"
 :WQ
@@ -122,28 +122,32 @@
 |3,0,36,0,1,0,1707814439,"E"
 
 # File marks:
-'0  1  123  ~/run_debian.sh
-|4,48,1,123,1707940578,"~/run_debian.sh"
-'1  1  132  ~/run_debian.sh
-|4,49,1,132,1707940537,"~/run_debian.sh"
-'2  1  0  ~/run_
-|4,50,1,0,1707940501,"~/run_"
-'3  1  177  ~/run_kvm.sh
-|4,51,1,177,1707935217,"~/run_kvm.sh"
-'4  1  222  ~/run_kvm.sh
-|4,52,1,222,1707935036,"~/run_kvm.sh"
-'5  1  249  ~/run_kvm.sh
-|4,53,1,249,1707934933,"~/run_kvm.sh"
-'6  1  249  ~/run_kvm.sh
-|4,54,1,249,1707934933,"~/run_kvm.sh"
-'7  18  0  /etc/libvirt/libvirt.conf
-|4,55,18,0,1707933993,"/etc/libvirt/libvirt.conf"
-'8  18  0  /etc/libvirt/libvirt.conf
-|4,56,18,0,1707933978,"/etc/libvirt/libvirt.conf"
-'9  1  30  ~/run_kvm.sh
-|4,57,1,30,1707933869,"~/run_kvm.sh"
+'0  1  29  ~/run_debian.sh
+|4,48,1,29,1707986883,"~/run_debian.sh"
+'1  1  18  ~/run_debian.sh
+|4,49,1,18,1707984878,"~/run_debian.sh"
+'2  1  123  ~/run_debian.sh
+|4,50,1,123,1707940578,"~/run_debian.sh"
+'3  1  123  ~/run_debian.sh
+|4,51,1,123,1707940578,"~/run_debian.sh"
+'4  1  132  ~/run_debian.sh
+|4,52,1,132,1707940537,"~/run_debian.sh"
+'5  1  132  ~/run_debian.sh
+|4,53,1,132,1707940537,"~/run_debian.sh"
+'6  1  132  ~/run_debian.sh
+|4,54,1,132,1707940537,"~/run_debian.sh"
+'7  1  132  ~/run_debian.sh
+|4,55,1,132,1707940537,"~/run_debian.sh"
+'8  1  0  ~/run_
+|4,56,1,0,1707940501,"~/run_"
+'9  1  177  ~/run_kvm.sh
+|4,57,1,177,1707935217,"~/run_kvm.sh"
 
 # Jumplist (newest first):
+-'  1  29  ~/run_debian.sh
+|4,39,1,29,1707986883,"~/run_debian.sh"
+-'  1  18  ~/run_debian.sh
+|4,39,1,18,1707984878,"~/run_debian.sh"
 -'  1  123  ~/run_debian.sh
 |4,39,1,123,1707940578,"~/run_debian.sh"
 -'  1  132  ~/run_debian.sh
@@ -156,6 +160,78 @@
 |4,39,1,0,1707940501,"~/run_"
 -'  1  0  ~/run_
 |4,39,1,0,1707940501,"~/run_"
+-'  1  0  ~/run_
+|4,39,1,0,1707940501,"~/run_"
+-'  1  0  ~/run_
+|4,39,1,0,1707940501,"~/run_"
+-'  1  0  ~/run_
+|4,39,1,0,1707940501,"~/run_"
+-'  1  0  ~/run_
+|4,39,1,0,1707940501,"~/run_"
+-'  1  0  ~/run_
+|4,39,1,0,1707940501,"~/run_"
+-'  1  0  ~/run_
+|4,39,1,0,1707940501,"~/run_"
+-'  1  0  ~/run_
+|4,39,1,0,1707940501,"~/run_"
+-'  1  0  ~/run_
+|4,39,1,0,1707940501,"~/run_"
+-'  1  0  ~/run_
+|4,39,1,0,1707940501,"~/run_"
+-'  1  0  ~/run_
+|4,39,1,0,1707940501,"~/run_"
+-'  1  0  ~/run_
+|4,39,1,0,1707940501,"~/run_"
+-'  1  0  ~/run_
+|4,39,1,0,1707940501,"~/run_"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
+-'  1  177  ~/run_kvm.sh
+|4,39,1,177,1707935217,"~/run_kvm.sh"
 -'  1  177  ~/run_kvm.sh
 |4,39,1,177,1707935217,"~/run_kvm.sh"
 -'  1  177  ~/run_kvm.sh
@@ -188,6 +264,54 @@
 |4,39,1,222,1707935036,"~/run_kvm.sh"
 -'  1  222  ~/run_kvm.sh
 |4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
+-'  1  222  ~/run_kvm.sh
+|4,39,1,222,1707935036,"~/run_kvm.sh"
 -'  1  249  ~/run_kvm.sh
 |4,39,1,249,1707934933,"~/run_kvm.sh"
 -'  1  249  ~/run_kvm.sh
@@ -204,156 +328,33 @@
 |4,39,1,249,1707934933,"~/run_kvm.sh"
 -'  1  249  ~/run_kvm.sh
 |4,39,1,249,1707934933,"~/run_kvm.sh"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933993,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933978,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933978,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933978,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933978,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933978,"/etc/libvirt/libvirt.conf"
--'  18  0  /etc/libvirt/libvirt.conf
-|4,39,18,0,1707933978,"/etc/libvirt/libvirt.conf"
+-'  1  249  ~/run_kvm.sh
+|4,39,1,249,1707934933,"~/run_kvm.sh"
+-'  1  249  ~/run_kvm.sh
+|4,39,1,249,1707934933,"~/run_kvm.sh"
+-'  1  249  ~/run_kvm.sh
+|4,39,1,249,1707934933,"~/run_kvm.sh"
+-'  1  249  ~/run_kvm.sh
+|4,39,1,249,1707934933,"~/run_kvm.sh"
+-'  1  249  ~/run_kvm.sh
+|4,39,1,249,1707934933,"~/run_kvm.sh"
+-'  1  249  ~/run_kvm.sh
+|4,39,1,249,1707934933,"~/run_kvm.sh"
+-'  1  249  ~/run_kvm.sh
+|4,39,1,249,1707934933,"~/run_kvm.sh"
+-'  1  249  ~/run_kvm.sh
+|4,39,1,249,1707934933,"~/run_kvm.sh"
 
 # History of marks within files (newest to oldest):
 
 > ~/run_debian.sh
-	*	1707940578	0
-	"	1	123
-	^	1	124
-	.	1	123
+	*	1707986883	0
+	"	1	29
+	^	1	30
+	.	1	29
 	+	1	3
 	+	1	123
+	+	1	29
 
 > ~/run_
 	*	1707940499	0
