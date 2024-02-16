@@ -913,3 +913,306 @@ cd ~
 ls
 fusermount -u mount_point
 ls
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+g++ access.cpp 
+sudo ./a.out > output.txt
+chmod +x run_five.sh 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+g++ access.cpp 
+sudo ./run_five.sh 
+diff access.cpp vm_access.cpp 
+git status
+cp vm_access.cpp cp vm_access3.cpp
+cp vm_access.cpp vm_access3.cpp
+ls
+rm vm_access3.cpp 
+sudo ./run_debian.sh 
+ls
+sudo resize2fs /dev/sda1
+ls
+sudo guestmount -a debian.qcow2 -i mount_point/
+ls
+sudo fusermount -u mount_point
+sudo ./run_debian.sh 
+ls
+du -h debian.qcow2 
+lh -lh debian.qcow2 
+ls -lh debian.qcow2 
+qemu-img resize debian.qcow2 +10G
+du -h debian.qcow2 
+sudo guestmount -a debian.qcow2 -i mount_point/
+ls
+sudo bash
+sudo guestmount -a debian.qcow2 -m /dev/sda1 -i mount_point/
+sudo guestmount -a debian.qcow2 -m /dev/sda1 -ro mount_point/
+sudo guestmount -a debian.qcow2 -m /dev/sda1 --ro mount_point/
+ls
+sudo fusermount -u mount_point
+sudo ./run_debian.sh 
+ls
+cd kbuild
+ls
+make INSTALL_MOD_PATH=../mod_dir/ modules_install
+ls
+cd ..
+cd mount_point
+ls
+cd ..
+ls
+sudo guestmount -a debian.qcow2 -i mount_point
+ls
+sudo bash
+ls
+sudo ./run_
+sudo ./run_debian.sh 
+ls
+sudo guestmount -a debian.qcow2 -i mount_point
+ls
+sudo bash
+sudo ./run_debian.sh 
+ls
+vim run_debian.sh 
+sudo ./run_
+sudo ./run_debian.sh 
+ls
+sudo guestmount -a ubuntu.img -i mount_point
+ls
+sudo bash
+ls
+./run_debian.sh 
+sudo ./run_
+sudo ./run_debian.sh 
+ls
+sudo guestmount -a debian.qcow2  -i mount_point
+sudo bash
+ls
+sudo ./run_debian.sh 
+ls
+vim run_debian.sh 
+sudo ./run_debian.sh 
+ls
+git status
+git add .
+git commit -m "safety ocmmit"
+ls
+g++ vm_access.cpp
+sudo ./a.out
+g++ vm_access.cpp
+ls
+vim run_debian.sh 
+ls
+sudo ./run_
+sudo ./run_debian.sh 
+ls
+df -h
+grep -r "hw_cache_event_ids"
+ls
+qemu-img resize debian.qcow2 10G
+ls
+g++ vm_access
+g++ vm_access.cpp 
+sudo ./a.out
+ls
+sudo ./run_debian.sh 
+ls
+cd mount_point
+ls
+cd lib/modules
+ls
+rm -r 5.10.209/
+mv ~/mod_dir/lib/modules/5.10.209/
+mv ~/mod_dir/lib/modules/5.10.209/ .
+ls
+cd ~
+ls
+fusermount -u mount_point
+ls
+ls
+df -h
+ls
+vim run_debian.sh 
+ls
+sudo ./run_debian.sh 
+ls
+sudo ./run_debian.sh 
+ls
+qemu-img debian.qcow2 
+ls
+demu-img info debian.qcow2 
+qemu-img info debian.qcow2 
+fdisk debian.qcow2 
+resizefs debian.qcow2 
+resize2fs debian.qcow2 
+fdisk -l debian.qcow2 
+losetup
+losetup /dev/loop0 debian.qcow2 
+sudo losetup /dev/loop0 debian.qcow2 
+ls
+sudo fdisk /dev/loop0
+ls
+losetup -D /dev/loop0
+sudo losetup -D /dev/loop0
+ls
+fdisk debian.qcow2 
+LS
+ls
+sudo ./run_debian.sh 
+ls
+sudo ./run_debian.sh 
+qemu-img info debian.qcow2 
+scripts/build
+man debian-distro-info 
+virsh list
+sudo virsh list
+virsh snapshot-list
+sudo virsh snapshot-list debian.qcow2 
+fdisk -l debian.qcow2 
+virsh define debian.qcow2 
+sudo virsh define debian.qcow2 
+ls
+virt-install
+sudo fdisk -l debian.qcow2 
+gpart
+sudo apt install gparted
+ls
+gparted -h
+gparted
+sudo gparted
+sudo gparted -nographic
+ls
+virt-df
+sudo apt install guestfs-tools
+virt-df -h debian.qcow2 
+sudo virt-df -h debian.qcow2 
+sudo virt-filesystem -a debian.qcow2 --all --long -h
+sudo apt install virt-filesystem
+sudo virt-filesystems -a debian.qcow2 --all --long -h
+sudo virt-resize debian.qcow2 --expand /dev/sda1
+lvcreate -L 20G -n debian2.qcow2 debian.qcow2
+sudo lvcreate -L 20G -n debian2.qcow2 debian.qcow2
+ls
+sudo virt-resize --expand /dev/sda1 debian.qcow2 debian-resize.qcow2
+ls
+cp debian.qcow2 debian-resize.qcow2
+df -h
+sudo virt-resize --expand /dev/sda1 debian.qcow2 debian-resize.qcow2
+ls
+vim run_debian.sh 
+sudo ./run_debian.sh 
+ls
+rm debian-resize.qcow2 
+cp debian.qcow2 debian-resize.qcow2
+sudo virt-df -h -a debian.qcow2 
+sudo virt-resize --expand /dev/sda15 debian.qcow2 debian-resize.qcow2
+ls
+sudo ./run_debian.sh 
+ls
+sudo ./run_debian.sh 
+ls
+rm debian-resize.qcow2 
+cp debian.qcow2 debian-resize.qcow2
+sudo virt-resize --resize /dev/sda15=5G debian.qcow2 debian-resize.qcow2
+ls
+cd kbuild
+ls
+make INSTALL_MOD_PATH=../mod_dir/ modules_install
+ls
+cd ..
+ls
+sudo guestmount -a debian-resize.qcow2 -i mount_point
+sudo bash
+ls
+sudo ./run_debian.sh 
+fsck debian-resize.qcow2 
+ls
+rm debian-resize.qcow2 
+ls
+sudo ./run_debian.sh 
+ls
+cp debian.qcow2 debian-resize.cow2
+ls
+sudo virt-resize --expand /dev/sda1 debian.qcow2 debian-resize.qcow2
+ls
+clear
+sudo virt-resize --expand /dev/sda1 debian.qcow2 debian-resize.qcow2
+ls
+mv debian-resize.cow2 debian-resize.qcow2 
+sudo virt-resize --expand /dev/sda1 debian.qcow2 debian-resize.qcow2
+sudo virt-df -h -a debian-resize.qcow2 
+sudo ./run_debian.sh 
+ls
+cd mount_point
+ls
+cd lib
+ls
+cd modules
+ls
+rm -rf 5.10.209/
+ls
+mv ~/mod_dir/lib/modules/5.10.209/ .
+ls
+cd ~
+ls
+fusermount -u mount_point
+ls
+sudo ./run_debian.sh 
+ls
+tmux
+ls
+htop
+ls
+tmux attach -t 1
+ls
+cd /arch
+ls
+cd /
+ls
+cd lib
+ls
+cd arch
+cd ~
+ls
+sudo guestmount -a debian-resize.qcow2 -i mount_point
+libguest-fs-test-tool
+guestmount
+sudo guestmount -a debian.qcow2 -i mount_point
+ls
+sudo fusermount -u mount_point
+ls
+sudo ./run_debian.sh 
+tmux attach -t 1
+ls
+tmux attach -t 0
+ls
+rm -r mod_dir/
+ls
+tmux attach -t 0
+ls
+tmux attach -t 1

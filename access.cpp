@@ -14,7 +14,7 @@
 #include <iostream>
 #include <fstream>
 #include <sched.h>
-
+#include <ctime>
 #include <sys/mman.h>
 
 // Define constants for the performance events
@@ -159,15 +159,11 @@ int main() {
     int cache_miss_fd_write = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_L1D | (PERF_COUNT_HW_CACHE_OP_WRITE << 8) | (PERF_COUNT_HW_CACHE_RESULT_MISS << 16));
     int tlb_miss_fd_write = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_DTLB | (PERF_COUNT_HW_CACHE_OP_WRITE << 8) | (PERF_COUNT_HW_CACHE_RESULT_MISS << 16));
 
-    // int cache_access_fd_prefetch = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_L1D | (PERF_COUNT_HW_CACHE_OP_PREFETCH << 8) | (PERF_COUNT_HW_CACHE_RESULT_ACCESS << 16));
-    // int cache_miss_fd_prefetch = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_L1D | (PERF_COUNT_HW_CACHE_OP_PREFETCH << 8) | (PERF_COUNT_HW_CACHE_RESULT_MISS << 16));
-    // int tlb_miss_fd_prefetch = create_perf_event(PERF_TYPE_HW_CACHE, PERF_COUNT_HW_CACHE_DTLB | (PERF_COUNT_HW_CACHE_OP_PREFETCH << 8) | (PERF_COUNT_HW_CACHE_RESULT_MISS << 16));
-
     size_t size_in_bytes = 1024 * 1024 * 1024;
-    int dec = 0;
+    int dec = 2;
     void* anonymous_buffer;
-    int private_flag = MAP_PRIVATE && 1;
-    int shared_flag = MAP_SHARED && 0;
+    int private_flag = MAP_PRIVATE && 0;
+    int shared_flag = MAP_SHARED && 1;
     int map_populate = MAP_POPULATE && 0;
     int should_memset = 0;
     opt_random_access = false;
@@ -193,7 +189,7 @@ int main() {
             exit(EXIT_FAILURE);
         }
 
-        anonymous_buffer = mmap(NULL, BUFFER_SIZE, PROT_READ | PROT_WRITE, private_flag | shared_flag | map_populate | MAP_SHARED, fd, 0);
+        anonymous_buffer = mmap(NULL, BUFFER_SIZE, PROT_READ | PROT_WRITE, private_flag | shared_flag | map_populate, fd, 0);
         if(anonymous_buffer == MAP_FAILED) {
             perror("mmap");
             close(fd);
@@ -226,14 +222,12 @@ int main() {
     ioctl(cache_miss_fd_write, PERF_EVENT_IOC_ENABLE, 0);
     ioctl(tlb_miss_fd_write, PERF_EVENT_IOC_ENABLE, 0);
 
-    // ioctl(cache_access_fd_prefetch, PERF_EVENT_IOC_ENABLE, 0);
-    // ioctl(cache_miss_fd_prefetch, PERF_EVENT_IOC_ENABLE, 0);
-    // ioctl(tlb_miss_fd_prefetch, PERF_EVENT_IOC_ENABLE, 0);
-
     // Execute the code to be measured (e.g., some computational task)
-	
+	clock_t start = clock();
 	 
     do_mem_access(memory_loc, size_in_bytes);
+
+    clock_t end = clock();
 
     // Stop the perf events
     ioctl(cache_access_fd, PERF_EVENT_IOC_DISABLE, 0);
@@ -243,10 +237,6 @@ int main() {
     ioctl(cache_access_fd_write, PERF_EVENT_IOC_DISABLE, 0);
     ioctl(cache_miss_fd_write, PERF_EVENT_IOC_DISABLE, 0);
     ioctl(tlb_miss_fd_write, PERF_EVENT_IOC_DISABLE, 0);
-
-    // ioctl(cache_access_fd_prefetch, PERF_EVENT_IOC_DISABLE, 0);
-    // ioctl(cache_miss_fd_prefetch, PERF_EVENT_IOC_DISABLE, 0);
-    // ioctl(tlb_miss_fd_prefetch, PERF_EVENT_IOC_DISABLE, 0);
 
     // Read and print the collected data
     long long cache_access_count, cache_miss_count, tlb_miss_count;
@@ -260,9 +250,6 @@ int main() {
     read(tlb_miss_fd_write, &tlb_miss_count_write, sizeof(tlb_miss_count_write));
 
     long long cache_access_count_prefetch, cache_miss_count_prefetch, tlb_miss_count_prefetch = 0;
-    // read(cache_access_fd_prefetch, &cache_access_count_prefetch, sizeof(cache_access_count_prefetch));
-    // read(cache_miss_fd_prefetch, &cache_miss_count_prefetch, sizeof(cache_miss_count_prefetch));
-    // read(tlb_miss_fd_prefetch, &tlb_miss_count_prefetch, sizeof(tlb_miss_count_prefetch));
 
     struct rusage usage;
     if (getrusage(RUSAGE_SELF, &usage) == -1) {
@@ -276,6 +263,7 @@ int main() {
     //printf("L1 Data Cache Accesses: %lld\n", cache_access_count);
     //printf("L1 Data Cache Misses: %lld\n", cache_miss_count);
     //printf("Data TLB Misses: %lld\n", tlb_miss_count);
+
     std::cout << cache_access_count << std::endl;
     std::cout << cache_miss_count << std::endl;
     std::cout << tlb_miss_count << std::endl;    
@@ -301,6 +289,11 @@ int main() {
 
     std::cout << l1_total << std::endl;
     std::cout << tlb_total << std::endl;
+
+    double elapsed_ms = (static_cast<double>(end - start) / CLOCKS_PER_SEC) * 1000;
+
+    // Print the elapsed time
+    std::cout << elapsed_ms << std::endl;
     //printf("Data TLB Miss Percentage: %.8f%%\n", tlb_miss_percentage);
     // Close the perf event file descriptors
     close(cache_access_fd);
@@ -310,10 +303,6 @@ int main() {
     close(cache_access_fd_write);
     close(cache_miss_fd_write);
     close(tlb_miss_fd_write);
-
-    // close(cache_access_fd_prefetch);
-    // close(cache_miss_fd_prefetch);
-    // close(tlb_miss_fd_prefetch);
 
     return 0;
 }
